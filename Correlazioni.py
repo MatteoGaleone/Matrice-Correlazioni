@@ -1,17 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[9]:
-
 
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import yfinance as yf
-
-
-# In[10]:
 
 
 def Programma():
@@ -34,9 +29,6 @@ def Programma():
             break
 
 
-# In[11]:
-
-
 def CalcolaMatrice(N):
     DF=pd.DataFrame()
     p=str(input('inserire i numero di periodi da considerare + y/mo/d, es: 5mo '))
@@ -47,20 +39,4 @@ def CalcolaMatrice(N):
     return DF
 
 
-# In[8]:
-
-
 Programma()
-
-
-# In[ ]:
-
-
-2+1
-
-
-# In[ ]:
-
-
-
-
