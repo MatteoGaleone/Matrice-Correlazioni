@@ -8,6 +8,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import yfinance as yf
 
+def CalcolaMatrice(N):
+    DF=pd.DataFrame()
+    p=str(input('inserire i numero di periodi da considerare + y/mo/d, es: 5mo '))
+    for i in range(1, N+1) :
+            t=str(input("Inserire il ticker del prodotto: "))
+            Dataset= yf.Ticker(t)
+            DF[t]=Dataset.history(period=p)['Close']
+    return DF
 
 def Programma():
     while True:
@@ -27,16 +35,5 @@ def Programma():
         else:
             print('Ciao')
             break
-
-
-def CalcolaMatrice(N):
-    DF=pd.DataFrame()
-    p=str(input('inserire i numero di periodi da considerare + y/mo/d, es: 5mo '))
-    for i in range(1, N+1) :
-            t=str(input("Inserire il ticker del prodotto: "))
-            Dataset= yf.Ticker(t)
-            DF[t]=Dataset.history(period=p)['Close']
-    return DF
-
 
 Programma()
