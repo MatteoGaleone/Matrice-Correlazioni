@@ -23,7 +23,7 @@ def Programma():
         DF=CalcolaMatrice(N)
         plt.figure(figsize=(10,8), dpi=150)
         sns.heatmap(DF.corr(), cmap='RdYlGn', linecolor='black', linewidth=0.1, annot=True)
-        plt.show()
+        return plt.show()
         plt.clf()
         while True:
             risposta = str(input('Vuoi visualizzare una nuova matrice? (si/no): '))
